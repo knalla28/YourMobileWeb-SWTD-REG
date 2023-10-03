@@ -1,0 +1,87 @@
+@using Microsoft.AspNetCore.Components.Web
+@using YourMobileGuide.Models
+@using YourMobileGuide.Services
+@inject JsonFileProductService ProductService
+<style>
+    .container {
+        margin-top: 20px;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #ccc;
+    }
+
+        .table th {
+            background-color: var(--table-header-background-color); /* Update the table header background color */
+            padding: 10px;
+            color: var(--header-text-color); /* Update the header text color */
+        }
+
+        .table td {
+            padding: 10px;
+            color: var(--text-color); /* Update the cell text color */
+        }
+
+    .btn-yellow {
+        background-color: yellow;
+        color: var(--button-text-color); /* Update the button text color */
+    }
+
+    .btn-warning {
+        background-color: orange;
+        color: var(--button-text-color); /* Update the button text color */
+    }
+
+        .btn-warning:hover {
+            color: white;
+            background-color: darkorange;
+        }
+
+    /* Light Mode */
+    :root {
+        --text-color: black;
+        --header-text-color: black;
+        --button-text-color: black;
+        --table-header-background-color: #f2f2f2;
+    }
+
+    /* Dark Mode */
+    body.night-mode {
+        --text-color: white;
+        --header-text-color: white;
+        --button-text-color: white;
+        --table-header-background-color: #333; /* Update the table header background color for dark mode */
+    }
+</style>
+<!--Create a table listing all items in the database-->
+<div class="container">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <!--Setting column name as Planet-->
+                <th style="color: var(--header-text-color)"> Title </th> <!-- Update the header text color -->
+                <!--Setting column name as Action-->
+                <th style="color: var(--header-text-color)"> Action </th> <!-- Update the header text color -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in ProductService.GetAllData())
+            {
+                <tr>
+                    <!--Display title of each entry in the products.json file-->
+                    <td style="color: var(--text-color)">
+                        <!-- Update the cell text color -->
+                    @product.Title
+                    </td>
+                    <!--Display link to each entry in the products.json file -->
+                    <td style="color: var(--text-color)">
+                        <!-- Update the cell text color -->
+                        <a href="./Product/Read/@product.Id" class="btn btn-yellow btn-warning">Read More</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

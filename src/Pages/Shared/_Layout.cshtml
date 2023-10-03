@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - YourMobileGuide</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --body-background-color: white;
+            --text-color: black;
+            --button-color: #252152;
+            --button-background-color: #fff;
+            --footer-text-color: black;
+            --popup-background-color: white; /* Added variable for popup background color */
+        }
+
+        body {
+            background-color: var(--body-background-color);
+            color: var(--text-color);
+        }
+
+        .navbar {
+            background-color: var(--navbar-background-color);
+            color: var(--navbar-text-color);
+        }
+
+        .btn-primary {
+            color: var(--button-color);
+            background-color: var(--button-background-color);
+            border-color: var(--button-color);
+        }
+
+        footer {
+            background-color: var(--footer-background-color);
+            color: var(--footer-text-color);
+        }
+
+        /* Dark Mode */
+        body.night-mode {
+            --body-background-color: black;
+            --text-color: white;
+            --button-color: #e9a8a6;
+            --button-background-color: #555;
+            --navbar-background-color: transparent;
+            --navbar-text-color: white;
+            --footer-background-color: transparent;
+            --footer-text-color: white;
+            --popup-background-color: #333; /* Dark mode popup background color */
+        }
+
+            body.night-mode .navbar {
+                background-color: var(--navbar-background-color);
+                color: var(--navbar-text-color);
+            }
+
+            body.night-mode .btn-primary {
+                color: var(--button-color);
+                background-color: var(--button-background-color);
+                border-color: var(--button-color);
+            }
+
+            body.night-mode footer {
+                background-color: var(--footer-background-color);
+                color: var(--footer-text-color);
+            }
+
+        .card.night-mode {
+            /* Styles for dark mode cards */
+            background-color: #333;
+            color: white;
+        }
+
+        /* Additional styles for dark mode popup */
+        .popup.night-mode {
+            /* Styles for dark mode popup */
+            background-color: var(--popup-background-color);
+            color: white;
+        }
+
+        /* Additional styles for light mode popup */
+        .popup.light-mode {
+            /* Styles for light mode popup */
+            background-color: var(--popup-background-color);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-navbar border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index" id="titleButton">YourMobileGuide</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Product/Index" id="productsButton">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy" id="privacyButton">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/AboutUs" id="aboutUsButton">About Us</a>
+                        </li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <li class="nav-item">
+                            <button id="themeSwitchDark" class="btn btn-secondary">Dark Mode</button>
+                        </li>
+                        &nbsp;&nbsp;
+                        <li class="nav-item">
+                            <button id="themeSwitchLight" class="btn btn-secondary">Light Mode</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted bg-footer">
+        <div class="container" style="font-size: 12px; color: var(--footer-text-color);">
+            CopyRights: Team 1 presents YourMobileGuide. All rights reserved. This material may not be reproduced, displayed, modified or distributed without the express prior written permission of the copyright holder - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        $(document).ready(function () {
+            // Check local storage for theme
+            if (localStorage.getItem('theme') === 'dark') {
+                $('body').addClass('night-mode');
+            }
+
+            // Dark mode switch button
+            $('#themeSwitchDark').click(function () {
+                $('body').addClass('night-mode');
+                $('body').removeClass('light-mode');
+                // Save theme to local storage
+                localStorage.setItem('theme', 'dark');
+                updateButtonAppearance();
+                updateCardAppearance();
+                updatePopupAppearance();
+            });
+
+            // Light mode switch button
+            $('#themeSwitchLight').click(function () {
+                $('body').addClass('light-mode');
+                $('body').removeClass('night-mode');
+                localStorage.setItem('theme', 'light');
+                updateButtonAppearance();
+                updateCardAppearance();
+                updatePopupAppearance();
+            });
+
+            function updateButtonAppearance() {
+                if ($('body').hasClass('night-mode')) {
+                    $('#productsButton').removeClass('text-dark').addClass('text-light');
+                    $('#privacyButton').removeClass('text-dark').addClass('text-light');
+                    $('#aboutUsButton').removeClass('text-dark').addClass('text-light');
+                    $('#titleButton').removeClass('text-dark').addClass('text-light');
+                } else {
+                    $('#productsButton').removeClass('text-light').addClass('text-dark');
+                    $('#privacyButton').removeClass('text-light').addClass('text-dark');
+                    $('#aboutUsButton').removeClass('text-light').addClass('text-dark');
+                    $('#titleButton').removeClass('text-light').addClass('text-dark');
+                }
+            }
+
+            function updateCardAppearance() {
+                if ($('body').hasClass('night-mode')) {
+                    $('.card').addClass('night-mode');
+                } else {
+                    $('.card').removeClass('night-mode');
+                }
+            }
+
+            function updatePopupAppearance() {
+                if ($('body').hasClass('night-mode')) {
+                    $('.popup').addClass('night-mode');
+                } else {
+                    $('.popup').addClass('light-mode');
+                }
+            }
+
+            updateButtonAppearance();
+            updateCardAppearance();
+            updatePopupAppearance();
+        });
+    </script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

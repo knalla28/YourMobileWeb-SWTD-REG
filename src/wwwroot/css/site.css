@@ -1,0 +1,249 @@
+﻿/* Light Mode */
+:root {
+    --body-background-color: white;
+    --text-color: black;
+    --button-color: #252152;
+    --button-background-color: #fff;
+    --header-text-color: black; /* Update the header text color */
+    --footer-text-color: black; /* Update the footer text color */
+    --card-background-color: #fbfafd;
+    --modal-background-color: #555; /* Update the modal background color */
+    --modal-text-color: black; /* Add this line */
+}
+
+body {
+    background-color: var(--body-background-color);
+    color: var(--text-color);
+}
+
+
+
+    /* Dark Mode */
+    body.night-mode {
+        --body-background-color: black;
+        --text-color: white;
+        --button-color: #e9a8a6;
+        --button-background-color: #555;
+        --header-text-color: white; /* Update the header text color */
+        --footer-text-color: white; /* Update the footer text color */
+        --card-background-color: #555;
+        --modal-text-color: white; /* Update the modal text color */
+    }
+/* Header */
+header {
+    color: var(--header-text-color);
+}
+
+
+
+/* Footer */
+footer {
+    color: var(--footer-text-color);
+}
+
+
+
+/* General Styles */
+.checked {
+    color: orange;
+}
+
+
+
+.fa-star {
+    cursor: pointer;
+}
+
+
+
+.card-columns .card:hover .card-img {
+    opacity: 1;
+    -webkit-transform-style: preserve-3d;
+}
+
+
+
+.card-columns .card-body {
+    height: 100px;
+    font-family: 'Nunito', sans-serif;
+    background: #fbfafd;
+    background: var(--card-background-color);
+}
+
+
+
+.card-columns .card-img {
+    height: 330px;
+    vertical-align: bottom;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .8;
+}
+
+
+
+.modal .card-img {
+    height: 500px;
+    vertical-align: bottom;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.modal-content {
+    background-color: var(--modal-background-color);
+    color: var(--modal-text-color);
+}
+
+.card-columns .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(37,33,82,.12), 0 4px 8px rgba(37,33,82,.06);
+}
+
+
+
+.card-footer {
+    background: var(--card-background-color);
+}
+
+
+
+a.navbar-brand {
+    white-space: normal;
+    font-family: 'Yellowtail', cursive;
+    font-size: xx-large;
+    text-align: center;
+    word-break: break-all;
+}
+
+
+
+a {
+    color: #0366d6;
+}
+
+
+
+.btn-primary {
+    color: var(--button-color);
+    background-color: var(--button-background-color);
+    border-color: var(--button-color);
+}
+
+
+
+    .btn-primary:hover {
+        color: var(--button-text-color);
+        background-color: #888;
+        border-color: #888;
+    }
+
+
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+
+
+html {
+    font-size: 14px;
+}
+
+
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+
+body {
+    margin-bottom: 60px;
+}
+
+
+
+p {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+ul {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+.bg-navbar {
+    background: -webkit-linear-gradient(110deg, lightblue 30%,#e9a8a6 60%);
+    background: -o-linear-gradient(110deg, lightblue 30%,#e9a8a6 60%);
+    background: -moz-linear-gradient(110deg, lightblue 30%,#e9a8a6 60%);
+    background: linear-gradient(110deg, lightblue 30%,#e9a8a6 60%);
+    background: rgba(255, 255, 255, 0);
+}
+
+
+
+.bg-footer {
+    background: -webkit-linear-gradient(110deg, lightpink 30%,lightblue 60%);
+    background: -o-linear-gradient(110deg, lightpink 30%,lightblue 60%);
+    background: -moz-linear-gradient(110deg, lightpink 30%,lightblue 60%);
+    background: linear-gradient(110deg, lightpink 30%,lightblue 60%);
+    background: rgba(255, 255, 255, 0);
+}

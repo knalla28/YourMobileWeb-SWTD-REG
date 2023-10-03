@@ -1,0 +1,14 @@
+@page
+@using YourMobileGuide.Components
+@model YourMobileGuide.Pages.Product.IndexModel
+@{
+    ViewData["Title"] = "Index page";
+}
+
+<div>
+    <a asp-page="Create" class="btn btn-green btn-success create-button"> Create New</a>
+</div>
+
+@(await Html.RenderComponentAsync<ProductIndex>(RenderMode.ServerPrerendered))
+
+<script src="_framework/blazor.service.js"></script>

@@ -1,0 +1,115 @@
+[
+  {
+    "Id": "Samsung_galaxy_z_flip4",
+    "Maker": "jenlooper",
+    "Image": "https://m.media-amazon.com/images/I/71gBYYZnIjL._AC_UY327_FMwebp_QL65_.jpg",
+    "Url": "https://www.t-mobile.com/cell-phone/samsung-galaxy-z-flip4?sku=610214675866",
+    "Title": "Samsung Galaxy Z Flip4",
+    "Description": "SAMSUNG Galaxy Z Flip 4 Cell Phone || Factory Unlocked Android Smartphone || 256GB || Flex Mode || Hands Free Camera || Compact || Foldable Design || Informative Cover Screen || US Version || Price:$1,059.99 .",
+    "Ratings": null,
+    "ProductType": 1,
+    "Quantity": null,
+    "Price": 0,
+    "CommentList": []
+  },
+  {
+    "Id": "samsung_galaxy_s23",
+    "Maker": null,
+    "Image": "https://m.media-amazon.com/images/I/71Tt0M\u002BHClL._AC_SX466_.jpg",
+    "Url": "https://www.t-mobile.com/cell-phone/samsung-galaxy-s23?sku=610214677587",
+    "Title": "Samsung Galaxy S23",
+    "Description": "SAMSUNG Galaxy S23 Cell Phone || Factory Unlocked Android Smartphone || 128GB Storage || 50MP Camera || Night Mode || Long Battery Life || Adaptive Display || US Version || 2023 || Price :$699.99",
+    "Ratings": null,
+    "ProductType": 2,
+    "Quantity": null,
+    "Price": 0,
+    "CommentList": []
+  },
+  {
+    "Id": "Samsung_s23_ultra",
+    "Maker": null,
+    "Image": "https://m.media-amazon.com/images/I/71HtN4qqLZL._AC_SX466_.jpg",
+    "Url": "https://www.amazon.com/SAMSUNG-Factory-Unlocked-Android-Smartphone/dp/B0BLP57HTN?th=1",
+    "Title": "Samsung Galaxy S23 Ultra",
+    "Description": "SAMSUNG Galaxy S23 Ultra Cell Phone || Factory Unlocked Android Smartphone || 512GB Storage || 200MP Camera || Night Mode || Long Battery Life || S Pen || US Version || 2023 || Price :$1,179.99.",
+    "Ratings": null,
+    "ProductType": 0,
+    "Quantity": null,
+    "Price": 0,
+    "CommentList": []
+  },
+  {
+    "Id": "Oneplus_11",
+    "Maker": null,
+    "Image": "https://m.media-amazon.com/images/I/81fRAoUL-fL._AC_SX679_.jpg",
+    "Url": "https://www.amazon.com/OnePlus-Unlocked-Smartphone-Hasselblad-Processor/dp/B0BNWQC9FJ?th=1",
+    "Title": "OnePlus 11 5G",
+    "Description": "OnePlus 11 5G || 16GB RAM\u002B256GB || Titan || US Factory Unlocked Android Smartphone || 5000 mAh battery || 80W Fast charging || Hasselblad Camera || 120Hz Fluid Display || 4nm Processor || Price : $799.99 ",
+    "Ratings": null,
+    "ProductType": 1,
+    "Quantity": null,
+    "Price": 0,
+    "CommentList": []
+  },
+  {
+    "Id": "samsung_galaxy_z_fold4",
+    "Maker": null,
+    "Image": "https://m.media-amazon.com/images/I/51rbykGWleL._AC_SX679_.jpg",
+    "Url": "https://www.t-mobile.com/cell-phone/samsung-galaxy-z-fold4?sku=610214675767",
+    "Title": "Samsung Galaxy Z Fold4",
+    "Description": "SAMSUNG Galaxy Z Fold 4 Cell Phone || Factory Unlocked Android Smartphone || 512GB || Flex Mode || Hands Free Video || Multi Window View || Foldable Display || S Pen Compatible || US Version || Price:$1,634.48.",
+    "Ratings": null,
+    "ProductType": 0,
+    "Quantity": null,
+    "Price": 0,
+    "CommentList": []
+  },
+  {
+    "Id": "iphone_14_pro_max",
+    "Maker": null,
+    "Image": "https://m.media-amazon.com/images/I/51uD1lmrV8L._AC_SL1000_.jpg",
+    "Url": "https://www.t-mobile.com/cell-phone/apple-iphone-14-pro-max?sku=194253378808",
+    "Title": "Iphone 14 Pro Max",
+    "Description": "Iphone 14 Pro Max cell phone || Factory Unlocked Smartphone || 256GB || 6.7 Inches || iOS 16|| US Version || Price:$1,450.00.",
+    "Ratings": null,
+    "ProductType": 0,
+    "Quantity": null,
+    "Price": 0,
+    "CommentList": [
+      {
+        "Id": "6faf44fe-db0c-4418-9d31-752b72f9dfed",
+        "Comment": "best phone i have ever seen"
+      }
+    ]
+  },
+  {
+    "Id": "iphone_13",
+    "Maker": null,
+    "Image": "https://m.media-amazon.com/images/I/61BUt5ZErdL._AC_SL1500_.jpg",
+    "Url": "https://www.t-mobile.com/cell-phone/apple-iphone-13?sku=194252705391",
+    "Title": "Iphone 13",
+    "Description": "Iphone 13 cell phone || Factory Unlocked Smartphone || 256GB || 6.1 Inches || iOS 15|| US Version || Price:$950.00.",
+    "Ratings": [
+      2
+    ],
+    "ProductType": 0,
+    "Quantity": null,
+    "Price": 0,
+    "CommentList": []
+  },
+  {
+    "Id": "iphone_12",
+    "Maker": null,
+    "Image": "https://m.media-amazon.com/images/I/61BUt5ZErdL._AC_SL1500_.jpg",
+    "Url": "https://www.t-mobile.com/cell-phone/apple-iphone-12?sku=194252028179",
+    "Title": "Iphone 12",
+    "Description": "Iphone 12 cell phone || Factory Unlocked Smartphone || 256GB || 6.1 Inches || iOS 14|| US Version || Price:$650.00.",
+    "Ratings": [
+      2
+    ],
+    "ProductType": 0,
+    "Quantity": null,
+    "Price": 0,
+    "CommentList": []
+  }
+]

@@ -1,0 +1,20 @@
+@page "{id}"
+@using YourMobileGuide.Services
+@using System.ComponentModel.DataAnnotations
+@inject JsonFileProductService ProductService
+@model YourMobileGuide.Pages.Product.ReadModel
+@{
+    ViewData["Title"] = "Read page";
+}
+<div class="read-content">
+    <h2 class="read-title, txt-color" id="productTitle">@Model.Product.Title</h2><br>
+
+    <img class="card-visible" src='@Model.Product.Image' alt='Image for @Model.Product.Title' width="350" height="500">
+    <br /><br />
+    <p class="card-text, txt-color">@Model.Product.Description</p>
+
+
+    <a asp-page="Update" asp-route-id="@Model.Product.Id" class="btn btn-grey btn-secondary">Update</a> &nbsp; &nbsp;
+    <a asp-page="Delete" asp-route-id="@Model.Product.Id" class="btn btn-red btn-danger">Delete</a>
+</div>
+

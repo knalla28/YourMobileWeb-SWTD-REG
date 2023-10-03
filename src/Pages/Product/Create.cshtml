@@ -1,0 +1,66 @@
+@page
+@using YourMobileGuide.Services
+@using YourMobileGuide.Models
+@inject JsonFileProductService ProductService
+@model YourMobileGuide.Pages.Product.CreateModel
+
+@{
+    ViewData["Title"] = "Create page";
+}
+
+<h1 class="txt-color">Create</h1>
+
+<div class="container">
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @Html.HiddenFor(x => x.Product.Id)
+
+        <div class="form-group">
+            <label asp-for="Product.Title" class="title, txt-color" class="control-label"></label>
+            <input asp-for="Product.Title" placeholder="Enter Title in alphanumeric characters" pattern="[a-zA-Z0-9\s]+" required class="form-control" />
+            <span asp-validation-for="Product.Title" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Description" class="title, txt-color" class="control-label"></label>
+            <input asp-for="Product.Description" placeholder="Enter Description in alphanumeric characters" pattern="[a-zA-Z0-9\s]+" required class="form-control" />
+            <span asp-validation-for="Product.Description" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group">
+            <label asp-for="Product.Image" class="title, txt-color" class="control-label"></label>
+            <input asp-for="Product.Image" Placeholder="Enter the Image Url" required class="form-control" pattern=".*\.(jpg|jpeg|png)$" />
+            <span asp-validation-for="Product.Image" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.Url" class="title, txt-color" class="control-label"></label>
+            <input asp-for="Product.Url" Placeholder="Enter URl" required class="form-control" pattern="^(http|https)://.*$" />
+            <span asp-validation-for="Product.Url" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.ProductType" class="title, txt-color" class="control-label">Year</label>
+            <select class="form-control"
+                    asp-for="Product.ProductType"
+                    asp-items="Html.GetEnumSelectList<ProductTypeEnum>()">
+                <option selected="selected" value="">Released in</option>
+            </select>
+            <span asp-validation-for="Product.ProductType" class="text-danger"></span>
+        </div>
+       <br />
+        <hr />
+        <br />
+
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-green btn-success" />
+        </div>
+    </form>
+
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
