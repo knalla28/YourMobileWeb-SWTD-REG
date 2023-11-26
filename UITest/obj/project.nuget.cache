@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5UeG+DiP1bqTWPP08RADUvgiOj38MlYmVKONGFWCiD6vYsHb+lu1B35nXeulNLRMM0vHncpq+hBMIccc+j4qDw==",
+  "dgSpecHash": "6gsB1CoY7jrWK6rihxdOzGs+KEkFP6bBhEit5zlQfb2wgEYE9sEzQffwbSIPMv4wKQLC79ktD1sOON1aHJ6JfA==",
   "success": true,
   "projectFilePath": "C:\\Users\\nkart\\source\\repos\\YourMobileWeb-SWTD\\UITest\\UITest.csproj",
   "expectedPackageFiles": [
@@ -34,6 +34,7 @@
     "C:\\Users\\nkart\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\nkart\\.nuget\\packages\\selenium.webdriver\\4.15.0\\selenium.webdriver.4.15.0.nupkg.sha512",
     "C:\\Users\\nkart\\.nuget\\packages\\selenium.webdriver.chromedriver\\119.0.6045.10500\\selenium.webdriver.chromedriver.119.0.6045.10500.nupkg.sha512",
+    "C:\\Users\\nkart\\.nuget\\packages\\selenium.webdriver.geckodriver\\0.33.0\\selenium.webdriver.geckodriver.0.33.0.nupkg.sha512",
     "C:\\Users\\nkart\\.nuget\\packages\\selenium.webdriver.msedgedriver\\119.0.2151.42\\selenium.webdriver.msedgedriver.119.0.2151.42.nupkg.sha512",
     "C:\\Users\\nkart\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\nkart\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",

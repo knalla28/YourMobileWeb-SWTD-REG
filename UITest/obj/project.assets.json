@@ -616,6 +616,12 @@
           "build/Selenium.WebDriver.ChromeDriver.targets": {}
         }
       },
+      "Selenium.WebDriver.GeckoDriver/0.33.0": {
+        "type": "package",
+        "build": {
+          "build/Selenium.WebDriver.GeckoDriver.targets": {}
+        }
+      },
       "Selenium.WebDriver.MSEdgeDriver/119.0.2151.42": {
         "type": "package",
         "build": {
@@ -2528,6 +2534,26 @@
         "nupkg-icon.png",
         "selenium.webdriver.chromedriver.119.0.6045.10500.nupkg.sha512",
         "selenium.webdriver.chromedriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriver.GeckoDriver/0.33.0": {
+      "sha512": "73AN577bb5u2aXRUtWyAzUU2ThYCI1QIhUxbL3bC0bUwpeSNGr8ca5KkKC8cUPtyf+q0aDzxNseyu3uL0SDq6w==",
+      "type": "package",
+      "path": "selenium.webdriver.geckodriver/0.33.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/DefinePropertiesGeckoDriver.targets",
+        "build/Selenium.WebDriver.GeckoDriver.targets",
+        "driver/linux64/geckodriver",
+        "driver/mac64/geckodriver",
+        "driver/mac64arm/geckodriver",
+        "driver/win32/geckodriver.exe",
+        "driver/win64/geckodriver.exe",
+        "nupkg-icon.png",
+        "selenium.webdriver.geckodriver.0.33.0.nupkg.sha512",
+        "selenium.webdriver.geckodriver.nuspec"
       ]
     },
     "Selenium.WebDriver.MSEdgeDriver/119.0.2151.42": {
@@ -5722,6 +5748,7 @@
       "Microsoft.NET.Test.Sdk >= 17.5.0",
       "Selenium.WebDriver >= 4.15.0",
       "Selenium.WebDriver.ChromeDriver >= 119.0.6045.10500",
+      "Selenium.WebDriver.GeckoDriver >= 0.33.0",
       "Selenium.WebDriver.MSEdgeDriver >= 119.0.2151.42",
       "coverlet.collector >= 3.2.0",
       "xunit >= 2.4.2",
@@ -5784,6 +5811,10 @@
           "Selenium.WebDriver.ChromeDriver": {
             "target": "Package",
             "version": "[119.0.6045.10500, )"
+          },
+          "Selenium.WebDriver.GeckoDriver": {
+            "target": "Package",
+            "version": "[0.33.0, )"
           },
           "Selenium.WebDriver.MSEdgeDriver": {
             "target": "Package",

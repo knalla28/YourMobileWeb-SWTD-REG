@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
-
+using OpenQA.Selenium.Firefox;
 
 namespace UITest
 {
@@ -14,10 +14,13 @@ namespace UITest
         public HomePageTests()
         {
             // Define the browser type in a configuration file or an environment variable
-            _browser = Environment.GetEnvironmentVariable("BROWSER") ?? "Chrome"; // Default to 'Chrome' if not set or you can set 'Edge'
+            _browser = Environment.GetEnvironmentVariable("BROWSER") ?? "firefox"; // Default to 'chrome' if not set
 
             switch (_browser.ToLower())
             {
+                case "firefox":
+                    _driver = new FirefoxDriver();
+                    break;
                 case "edge":
                     _driver = new EdgeDriver();
                     break;
@@ -41,7 +44,7 @@ namespace UITest
         }
 
         [Fact]
-        public void HomePage_Title_Should_Match_Expected_In_Chrome_And_Edge()
+        public void HomePage_Title_Should_Match_Expected_In_All_Browsers()
         {
             _driver.Navigate().GoToUrl("https://localhost:63680/");
             Assert.Equal("Index page - YourMobileGuide", _driver.Title);

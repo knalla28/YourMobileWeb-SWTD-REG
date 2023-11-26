@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[119.0.6045.10500, )"
             },
+            "Selenium.WebDriver.GeckoDriver": {
+              "target": "Package",
+              "version": "[0.33.0, )"
+            },
             "Selenium.WebDriver.MSEdgeDriver": {
               "target": "Package",
               "version": "[119.0.2151.42, )"
