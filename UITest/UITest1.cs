@@ -14,7 +14,7 @@ namespace UITest
         public HomePageTests()
         {
             // Define the browser type in a configuration file or an environment variable
-            _browser = Environment.GetEnvironmentVariable("BROWSER") ?? "firefox"; // Default to 'chrome' if not set
+            _browser = Environment.GetEnvironmentVariable("BROWSER") ?? "chrome"; // Default to 'chrome' if not set
 
             switch (_browser.ToLower())
             {
