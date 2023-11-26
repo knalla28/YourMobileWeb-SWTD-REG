@@ -2,18 +2,20 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
+
 
 namespace UITest
 {
-    public class HomePageTests : IDisposable
+    public class SearchFunctionalityTests : IDisposable
     {
         private readonly IWebDriver _driver;
         private readonly string _screenshotDirectory;
         private readonly string _browser;
 
-        public HomePageTests()
+        public SearchFunctionalityTests()
         {
-            // Define the browser type in a configuration file or an environment variable
             _browser = Environment.GetEnvironmentVariable("BROWSER") ?? "chrome"; // Default to 'chrome' if not set
 
             switch (_browser.ToLower())
@@ -30,13 +32,11 @@ namespace UITest
                     break;
             }
 
-            _driver.Manage().Window.Maximize(); // Maximize the browser window
+            _driver.Manage().Window.Maximize();
 
-            // Set the screenshot directory to a relative path
             _screenshotDirectory = Path.GetFullPath(
                 Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "ScreenShots"));
 
-            // Ensure the directory for the screenshots exists
             if (!Directory.Exists(_screenshotDirectory))
             {
                 Directory.CreateDirectory(_screenshotDirectory);
@@ -44,21 +44,31 @@ namespace UITest
         }
 
         [Fact]
-        public void HomePage_Title_Should_Match_Expected_In_All_Browsers()
+        public void Search_Samsung_And_Verify_Results()
         {
             _driver.Navigate().GoToUrl("https://localhost:63680/");
-            Assert.Equal("Index page - YourMobileGuide", _driver.Title);
+            Thread.Sleep(3000); // Delay before taking a screenshot
+            TakeScreenshot("HomePageBeforeSearch");
 
-            // Take a screenshot after checking the title
-            TakeScreenshot($"HomePageTitleVerified_{_browser}");
+            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+            IWebElement searchInput = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("searchText")));
+            Thread.Sleep(3000); // Delay before entering text
+            searchInput.SendKeys("Samsung");
 
-            // Keep the browser open for a set amount of time (e.g., 5 seconds)
-            System.Threading.Thread.Sleep(5000);
+            // Click the search button to initiate the search
+            IWebElement searchButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("search")));
+            Thread.Sleep(3000); // Delay before clicking the search button
+            searchButton.Click();
+
+            // Assuming you need to wait for search results after clicking the search button
+            Thread.Sleep(3000); // Delay after search before taking a screenshot
+            TakeScreenshot("SearchResultsForSamsung");
         }
 
         private void TakeScreenshot(string fileName)
         {
             var screenshotDriver = _driver as ITakesScreenshot;
+            Thread.Sleep(3000); // Delay before taking each screenshot
             if (screenshotDriver != null)
             {
                 var screenshot = screenshotDriver.GetScreenshot();

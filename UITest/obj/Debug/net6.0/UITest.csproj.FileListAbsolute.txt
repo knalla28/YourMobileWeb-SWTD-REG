@@ -212,3 +212,4 @@ D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\obj\Debug\net6.0\refint\UI
 D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\obj\Debug\net6.0\UITest.pdb
 D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\obj\Debug\net6.0\UITest.genruntimeconfig.cache
 D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\obj\Debug\net6.0\ref\UITest.dll
+C:\Users\nkart\Source\Repos\YourMobileWeb-SWTD\UITest\bin\Debug\net6.0\SeleniumExtras.WaitHelpers.dll
