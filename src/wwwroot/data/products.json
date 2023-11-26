@@ -113,11 +113,24 @@
     "CommentList": []
   },
   {
-    "Id": "example_class_demo",
+    "Id": "update_example_class_demo",
     "Maker": null,
     "Image": "https://example.com/example-image.jpg",
     "Url": "https://example.com/",
-    "Title": "Example phone",
+    "Title": "Example phone 1",
+    "Description": "An example description.",
+    "Ratings": null,
+    "ProductType": 0,
+    "Quantity": null,
+    "Price": 0,
+    "CommentList": []
+  },
+  {
+    "Id": "delete_example_class_demo",
+    "Maker": null,
+    "Image": "https://example.com/example-image.jpg",
+    "Url": "https://example.com/",
+    "Title": "Example phone 2",
     "Description": "An example description.",
     "Ratings": null,
     "ProductType": 0,
