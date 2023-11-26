@@ -1,18 +1,5 @@
 [
   {
-    "Id": "Samsung_galaxy_z_flip4",
-    "Maker": "jenlooper",
-    "Image": "https://m.media-amazon.com/images/I/71gBYYZnIjL._AC_UY327_FMwebp_QL65_.jpg",
-    "Url": "https://www.t-mobile.com/cell-phone/samsung-galaxy-z-flip4?sku=610214675866",
-    "Title": "Samsung Galaxy Z Flip4",
-    "Description": "SAMSUNG Galaxy Z Flip 4 Cell Phone || Factory Unlocked Android Smartphone || 256GB || Flex Mode || Hands Free Camera || Compact || Foldable Design || Informative Cover Screen || US Version || Price:$1,059.99 .",
-    "Ratings": null,
-    "ProductType": 1,
-    "Quantity": null,
-    "Price": 0,
-    "CommentList": []
-  },
-  {
     "Id": "samsung_galaxy_s23",
     "Maker": null,
     "Image": "https://m.media-amazon.com/images/I/71Tt0M\u002BHClL._AC_SX466_.jpg",
@@ -34,19 +21,6 @@
     "Description": "SAMSUNG Galaxy S23 Ultra Cell Phone || Factory Unlocked Android Smartphone || 512GB Storage || 200MP Camera || Night Mode || Long Battery Life || S Pen || US Version || 2023 || Price :$1,179.99.",
     "Ratings": null,
     "ProductType": 0,
-    "Quantity": null,
-    "Price": 0,
-    "CommentList": []
-  },
-  {
-    "Id": "Oneplus_11",
-    "Maker": null,
-    "Image": "https://m.media-amazon.com/images/I/81fRAoUL-fL._AC_SX679_.jpg",
-    "Url": "https://www.amazon.com/OnePlus-Unlocked-Smartphone-Hasselblad-Processor/dp/B0BNWQC9FJ?th=1",
-    "Title": "OnePlus 11 5G",
-    "Description": "OnePlus 11 5G || 16GB RAM\u002B256GB || Titan || US Factory Unlocked Android Smartphone || 5000 mAh battery || 80W Fast charging || Hasselblad Camera || 120Hz Fluid Display || 4nm Processor || Price : $799.99 ",
-    "Ratings": null,
-    "ProductType": 1,
     "Quantity": null,
     "Price": 0,
     "CommentList": []
@@ -83,21 +57,6 @@
     ]
   },
   {
-    "Id": "iphone_13",
-    "Maker": null,
-    "Image": "https://m.media-amazon.com/images/I/61BUt5ZErdL._AC_SL1500_.jpg",
-    "Url": "https://www.t-mobile.com/cell-phone/apple-iphone-13?sku=194252705391",
-    "Title": "Iphone 13",
-    "Description": "Iphone 13 cell phone || Factory Unlocked Smartphone || 256GB || 6.1 Inches || iOS 15|| US Version || Price:$950.00.",
-    "Ratings": [
-      2
-    ],
-    "ProductType": 0,
-    "Quantity": null,
-    "Price": 0,
-    "CommentList": []
-  },
-  {
     "Id": "iphone_12",
     "Maker": null,
     "Image": "https://m.media-amazon.com/images/I/61BUt5ZErdL._AC_SL1500_.jpg",
@@ -107,6 +66,69 @@
     "Ratings": [
       2
     ],
+    "ProductType": 0,
+    "Quantity": null,
+    "Price": 0,
+    "CommentList": []
+  },
+  {
+    "Id": "Oneplus_11",
+    "Maker": null,
+    "Image": "https://m.media-amazon.com/images/I/81fRAoUL-fL._AC_SX679_.jpg",
+    "Url": "https://www.amazon.com/OnePlus-Unlocked-Smartphone-Hasselblad-Processor/dp/B0BNWQC9FJ?th=1",
+    "Title": "OnePlus 11 5G",
+    "Description": "OnePlus 11 5G || 16GB RAM\u002B256GB || Titan || US Factory Unlocked Android Smartphone || 5000 mAh battery || 80W Fast charging || Hasselblad Camera || 120Hz Fluid Display || 4nm Processor || Price : $799.99 ",
+    "Ratings": [
+      5,
+      1,
+      4
+    ],
+    "ProductType": 1,
+    "Quantity": null,
+    "Price": 0,
+    "CommentList": [
+      {
+        "Id": "809f5320-f18d-4087-b3e9-2928fd54d360",
+        "Comment": "wow!"
+      }
+    ]
+  },
+  {
+    "Id": "myphone1",
+    "Maker": null,
+    "Image": "https://cdn.thewirecutter.com/wp-content/media/2023/10/androidphones-2048px-4856-2x1-1.jpg?auto=webp\u0026quality=75\u0026crop=2:1\u0026width=980\u0026dpr=2",
+    "Url": "https://www.google.com/",
+    "Title": "myphone15",
+    "Description": "This phone has got 5000 mAh battery and best resolution camera",
+    "Ratings": [
+      0
+    ],
+    "ProductType": 0,
+    "Quantity": null,
+    "Price": 0,
+    "CommentList": []
+  },
+  {
+    "Id": "9e5ba2cc-aff2-47db-b39f-28da7b1784ae",
+    "Maker": null,
+    "Image": "https://example.en.jpg",
+    "Url": "https://example.com",
+    "Title": "myPhone 15",
+    "Description": "Brand new myPhone base model",
+    "Ratings": null,
+    "ProductType": 0,
+    "Quantity": null,
+    "Price": 0,
+    "CommentList": []
+  },
+  {
+    "Id": "iphone_13",
+    "Maker": null,
+    "Image": "https://example.en.jpg",
+    "Url": "https://example.com",
+    "Title": "iPhone 13 Pro",
+    "Description": "This is a test.",
+    "Ratings": null,
     "ProductType": 0,
     "Quantity": null,
     "Price": 0,

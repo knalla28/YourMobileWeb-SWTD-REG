@@ -16,9 +16,11 @@
   <ItemGroup>
 	<PackageReference Include="bunit" Version="1.19.14" />
 	<PackageReference Include="Moq" Version="4.16.1" /> 
-    <PackageReference Include="NUnit" Version="3.12.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
 	<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+	<PackageReference Include="Selenium.WebDriver" Version="4.15.0" />
+	<PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="119.0.6045.10500" />
 
   </ItemGroup>
 
