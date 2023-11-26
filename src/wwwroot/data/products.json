@@ -111,5 +111,18 @@
     "Quantity": null,
     "Price": 0,
     "CommentList": []
+  },
+  {
+    "Id": "example_class_demo",
+    "Maker": null,
+    "Image": "https://example.com/example-image.jpg",
+    "Url": "https://example.com/",
+    "Title": "Example phone",
+    "Description": "An example description.",
+    "Ratings": null,
+    "ProductType": 0,
+    "Quantity": null,
+    "Price": 0,
+    "CommentList": []
   }
 ]
