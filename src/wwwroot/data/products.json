@@ -125,6 +125,11 @@
     "ProductType": 0,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [
+      {
+        "Id": "06ba7663-d9b6-4c73-8b38-21543df1745a",
+        "Comment": "Amazing!"
+      }
+    ]
   }
 ]
