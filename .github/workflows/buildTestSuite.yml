@@ -13,18 +13,26 @@ jobs:
     - name: Setup .NET 6.0
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6.0' 
+        dotnet-version: '6.0'
 
     - name: Restore dependencies
-      run: dotnet restore YourMobileGuide.sln 
+      run: dotnet restore YourMobileGuide.sln
 
     - name: Build the project
       run: dotnet build YourMobileGuide.sln --configuration Release --no-restore
       continue-on-error: true
 
     - name: Run unit tests
-      run: dotnet test UnitTests/UnitTests.csproj --no-build --logger "trx;LogFileName=unit_test_results.trx"
+      run: |
+        dotnet test UnitTests/UnitTests.csproj --no-build --results-directory /testresults --logger "trx;LogFileName=unit_test_results.trx"
       continue-on-error: true
+
+    - name: Upload Test Results
+      uses: actions/upload-artifact@v2
+      if: failure()
+      with:
+        name: unit-test-results
+        path: /testresults
 
     - name: Run UI tests
       run: dotnet test UITest/UITest.csproj --no-build --logger "trx;LogFileName=ui_test_results.trx"
@@ -41,6 +49,6 @@ jobs:
         body: |
           Did Build Succeed: ${{ needs.build-and-test.result == 'success' }}
           Did Tests Pass: ${{ needs.build-and-test.result == 'success' }}
-        to: aabraham2@seattleu.edu 
-        from: knalla@seattleu.edu 
+        to: aabraham2@seattleu.edu
+        from: knalla@seattleu.edu
         use_tls: true
