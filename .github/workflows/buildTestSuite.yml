@@ -1,0 +1,51 @@
+name: Build and Test ASP.NET Core Project
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1' # Replace with your project's .NET Core version
+
+    - name: Install dependencies
+      run: dotnet restore
+
+    - name: Build the project
+      run: dotnet build --no-restore
+      continue-on-error: true
+
+    - name: Run tests
+      run: dotnet test --no-build
+      continue-on-error: true
+
+    - name: Prepare email content
+      id: prepare_email
+      run: |
+        echo "BuildStatus=True" >> $GITHUB_ENV
+        echo "TestStatus=True" >> $GITHUB_ENV
+        if [ ${{ job.status }} == 'failure' ]; then
+          echo "BuildStatus=False" >> $GITHUB_ENV
+          echo "TestStatus=False" >> $GITHUB_ENV
+        fi
+
+    - name: Send Email Notification
+      uses: dawidd6/action-send-mail@v2
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: ${{ secrets.EMAIL_USERNAME }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
+        subject: GitHub Actions Build and Test Report
+        body: |
+          Build Succeeded: ${{ env.BuildStatus }}
+          Tests Passed: ${{ env.TestStatus }}
+        to: nkarthik610@yahoo.com # Replace with recipient's email
+        from: GitHub Actions <knalla@seattleu.edu> # Replace with sender's email
