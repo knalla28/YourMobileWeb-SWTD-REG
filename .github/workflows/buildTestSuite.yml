@@ -10,13 +10,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Setup .NET Core
+    - name: Setup .NET 6.0
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '3.1' # Replace with the .NET Core version your project uses
+        dotnet-version: '6.0' # Updated to .NET 6.0
 
     - name: Restore dependencies
-      run: dotnet restore YourMobileGuide.sln
+      run: dotnet restore YourMobileGuide.sln # Replace with your solution's path
 
     - name: Build the project
       run: dotnet build YourMobileGuide.sln --configuration Release --no-restore
@@ -41,7 +41,6 @@ jobs:
         body: |
           Did Build Succeed: ${{ needs.build-and-test.result == 'success' }}
           Did Tests Pass: ${{ needs.build-and-test.result == 'success' }}
-        to: aabraham2@seattleu.edu
-        from: knalla@seattleu.edu # Replace with your email address
+        to: aabraham2@seattleu.edu # Replace with recipient's email
+        from: knalla@seattleu.edu # Replace with sender's email
         use_tls: true
-
