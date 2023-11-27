@@ -13,21 +13,21 @@ jobs:
     - name: Setup .NET 6.0
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6.0' # Updated to .NET 6.0
+        dotnet-version: '6.0' 
 
     - name: Restore dependencies
-      run: dotnet restore YourMobileGuide.sln # Replace with your solution's path
+      run: dotnet restore YourMobileGuide.sln 
 
     - name: Build the project
       run: dotnet build YourMobileGuide.sln --configuration Release --no-restore
       continue-on-error: true
 
     - name: Run unit tests
-      run: dotnet test UnitTests/UnitTests.csproj --no-build --logger trx
+      run: dotnet test UnitTests/UnitTests.csproj --no-build --logger trx;LogFileName=unit_test_results.trx
       continue-on-error: true
 
     - name: Run UI tests
-      run: dotnet test UITest/UITest.csproj --no-build --logger trx
+      run: dotnet test UITest/UITest.csproj --no-build --logger trx;LogFileName=ui_test_results.trx
       continue-on-error: true
 
     - name: Send Email Notification
@@ -41,6 +41,6 @@ jobs:
         body: |
           Did Build Succeed: ${{ needs.build-and-test.result == 'success' }}
           Did Tests Pass: ${{ needs.build-and-test.result == 'success' }}
-        to: aabraham2@seattleu.edu # Replace with recipient's email
-        from: knalla@seattleu.edu # Replace with sender's email
+        to: aabraham2@seattleu.edu 
+        from: knalla@seattleu.edu 
         use_tls: true
