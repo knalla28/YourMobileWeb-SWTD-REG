@@ -106,6 +106,7 @@ C:\Users\nkart\Source\Repos\YourMobileWeb-SWTD\UITest\obj\Debug\net6.0\refint\UI
 C:\Users\nkart\Source\Repos\YourMobileWeb-SWTD\UITest\obj\Debug\net6.0\UITest.pdb
 C:\Users\nkart\Source\Repos\YourMobileWeb-SWTD\UITest\obj\Debug\net6.0\UITest.genruntimeconfig.cache
 C:\Users\nkart\Source\Repos\YourMobileWeb-SWTD\UITest\obj\Debug\net6.0\ref\UITest.dll
+C:\Users\nkart\Source\Repos\YourMobileWeb-SWTD\UITest\bin\Debug\net6.0\WebDriver.Support.dll
 D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\bin\Debug\net6.0\testhost.dll
 D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\bin\Debug\net6.0\testhost.exe
 D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\bin\Debug\net6.0\selenium-manager\linux\selenium-manager
@@ -130,6 +131,7 @@ D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\bin\Debug\net6.0\Microsoft
 D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\bin\Debug\net6.0\NuGet.Frameworks.dll
+D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\bin\Debug\net6.0\WebDriver.Support.dll
 D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\bin\Debug\net6.0\WebDriver.dll
 D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\bin\Debug\net6.0\System.Drawing.Common.dll
 D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\bin\Debug\net6.0\xunit.abstractions.dll
@@ -214,4 +216,3 @@ D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\obj\Debug\net6.0\refint\UI
 D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\obj\Debug\net6.0\UITest.pdb
 D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\obj\Debug\net6.0\UITest.genruntimeconfig.cache
 D:\Programming languages\C#\YourMobileWeb-SWTD\UITest\obj\Debug\net6.0\ref\UITest.dll
-C:\Users\nkart\Source\Repos\YourMobileWeb-SWTD\UITest\bin\Debug\net6.0\WebDriver.Support.dll
