@@ -1,8 +1,11 @@
-﻿using OpenQA.Selenium;
+﻿using System;
+using System.IO;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
+using Xunit;
 using SeleniumExtras.WaitHelpers;
 
 namespace UITest
@@ -58,29 +61,46 @@ namespace UITest
             Thread.Sleep(3000);
             TakeScreenshot("HomePageAfterSorting");
 
-            // Clicking on "More Info" for iPhone 12
-            IWebElement moreInfoButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("moreInfo_iphone_12")));
+            // Clicking on "More Info" for iPhone 13
+            IWebElement moreInfoButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("moreInfo_iphone_13")));
             moreInfoButton.Click();
             Thread.Sleep(3000);
-            TakeScreenshot("iPhone12MoreInfo");
+            TakeScreenshot("iPhone13MoreInfo");
 
             // Clicking the "Comment" button
-            IWebElement commentButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("AddComment")));
-            commentButton.Click();
-            Thread.Sleep(3000);
-            TakeScreenshot("CommentInputField");
+            // Check if the button is inside an iframe or not
+            try
+            {
+                // If the element is inside an iframe, switch to it
+                // _driver.SwitchTo().Frame("your_iframe_id");
 
-            // Typing the comment "Amazing!" into the input field
-            IWebElement commentInputField = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("newComment")));
-            commentInputField.SendKeys("Amazing!");
-            Thread.Sleep(3000);
-            TakeScreenshot("CommentEntered");
+                IWebElement commentButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("AddComment")));
+                commentButton.Click();
+                Thread.Sleep(3000);
+                TakeScreenshot("CommentInputField");
 
-            // Clicking the "Keep" button
-            IWebElement keepButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("keepComment")));
-            keepButton.Click();
-            Thread.Sleep(3000);
-            TakeScreenshot("CommentKept");
+                // Typing the comment "Amazing!" into the input field
+                IWebElement commentInputField = wait.Until(ExpectedConditions.ElementIsVisible(By.Id("newComment")));
+                commentInputField.SendKeys("Amazing!");
+                Thread.Sleep(3000);
+                TakeScreenshot("CommentEntered");
+
+                // Clicking the "Keep" button
+                IWebElement keepButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("keepComment")));
+                keepButton.Click();
+                Thread.Sleep(3000);
+                TakeScreenshot("CommentKept");
+            }
+            catch (NoSuchElementException ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                throw; // Re-throw the exception to fail the test
+            }
+            finally
+            {
+                // Switch back to the main content if we've switched to an iframe
+                // _driver.SwitchTo().DefaultContent();
+            }
         }
 
         private void TakeScreenshot(string fileName)
@@ -90,6 +110,7 @@ namespace UITest
             string filePath = Path.Combine(_screenshotDirectory, $"{fileName}.png");
             screenshot.SaveAsFile(filePath, ScreenshotImageFormat.Png);
             Console.WriteLine($"Screenshot saved to: {filePath}");
+            Thread.Sleep(3000); // Add delay after taking a screenshot
         }
 
         public void Dispose()
