@@ -23,11 +23,11 @@ jobs:
       continue-on-error: true
 
     - name: Run unit tests
-      run: dotnet test UnitTests/UnitTests.csproj --no-build --logger trx;LogFileName=unit_test_results.trx
+      run: dotnet test UnitTests/UnitTests.csproj --no-build --logger "trx;LogFileName=unit_test_results.trx"
       continue-on-error: true
 
     - name: Run UI tests
-      run: dotnet test UITest/UITest.csproj --no-build --logger trx;LogFileName=ui_test_results.trx
+      run: dotnet test UITest/UITest.csproj --no-build --logger "trx;LogFileName=ui_test_results.trx"
       continue-on-error: true
 
     - name: Send Email Notification
