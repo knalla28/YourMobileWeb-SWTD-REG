@@ -84,7 +84,12 @@
     "ProductType": 0,
     "Quantity": null,
     "Price": 0,
-    "CommentList": []
+    "CommentList": [
+      {
+        "Id": "06ba7663-d9b6-4c73-8b38-21543df1745a",
+        "Comment": "Amazing!"
+      }
+    ]
   },
   {
     "Id": "Oneplus_11",
@@ -103,7 +108,7 @@
     "Price": 0,
     "CommentList": [
       {
-        "Id": "55577d62-e7e1-4ac8-8106-036409de6d67",
+        "Id": "8f855e31-371b-45c9-92a9-3f3ef79ab36e",
         "Comment": "wow!"
       }
     ]
@@ -124,7 +129,7 @@
     "CommentList": []
   },
   {
-    "Id": "6c9da3ca-f226-414d-b8a8-283b06a103ea",
+    "Id": "12bc576e-9f8e-4915-808d-d445232dbd8b",
     "Maker": null,
     "Image": "https://example.en.jpg",
     "Url": "https://example.com",

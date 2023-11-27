@@ -10,6 +10,7 @@
         "dependencies": {
           "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
           "Microsoft.NET.Test.Sdk": "17.5.0",
+          "Selenium.Support": "4.15.0",
           "Selenium.WebDriver": "4.15.0",
           "Selenium.WebDriver.ChromeDriver": "119.0.6045.10500",
           "Selenium.WebDriver.GeckoDriver": "0.33.0",
@@ -432,6 +433,17 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "Selenium.Support/4.15.0": {
+        "dependencies": {
+          "Selenium.WebDriver": "4.15.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.Support.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
       "Selenium.WebDriver/4.15.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
@@ -1296,6 +1308,13 @@
       "sha512": "sha512-VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg==",
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "Selenium.Support/4.15.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zqkSQYMS2JcAd+AKavADPoe/RyYjiklc/TRms/nzDH9Wo/OpYOqE7h9D8ggwXr4auErNvbAIqEGqIkAWElTkpg==",
+      "path": "selenium.support/4.15.0",
+      "hashPath": "selenium.support.4.15.0.nupkg.sha512"
     },
     "Selenium.WebDriver/4.15.0": {
       "type": "package",
