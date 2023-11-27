@@ -98,19 +98,6 @@
     "CommentList": []
   },
   {
-    "Id": "65782f7e-8462-4058-a7ff-ecc8b0c2eac3",
-    "Maker": null,
-    "Image": "https://media.wired.com/photos/6508ec5709b580a9d232c71f/master/w_1920,c_limit/iPhone-15-Pro-Review-Top-Gear.jpg",
-    "Url": "https://www.apple.com/shop/buy-iphone/iphone-15-pro/6.1-inch-display-256gb-blue-titanium-unlocked",
-    "Title": "iPhone 15 pro",
-    "Description": "The iPhone 15 pro is the latest and most advanced model featuring the A17 chip.",
-    "Ratings": null,
-    "ProductType": 3,
-    "Quantity": null,
-    "Price": 0,
-    "CommentList": []
-  },
-  {
     "Id": "iphone_12",
     "Maker": null,
     "Image": "https://m.media-amazon.com/images/I/61BUt5ZErdL._AC_SL1500_.jpg",
