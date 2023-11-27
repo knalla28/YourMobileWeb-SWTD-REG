@@ -54,4 +54,3 @@ jobs:
           Did Tests Pass: ${{ needs.build-and-test.result == 'success' }}
         to: aabraham2@seattleu.edu
         from: knalla@seattleu.edu
-        use_tls: true
