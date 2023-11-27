@@ -1,0 +1,47 @@
+name: Build and Test Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1' # Replace with the .NET Core version your project uses
+
+    - name: Restore dependencies
+      run: dotnet restore YourMobileGuide.sln
+
+    - name: Build the project
+      run: dotnet build YourMobileGuide.sln --configuration Release --no-restore
+      continue-on-error: true
+
+    - name: Run unit tests
+      run: dotnet test UnitTests/UnitTests.csproj --no-build --logger trx
+      continue-on-error: true
+
+    - name: Run UI tests
+      run: dotnet test UITest/UITest.csproj --no-build --logger trx
+      continue-on-error: true
+
+    - name: Send Email Notification
+      uses: dawidd6/action-send-mail@v2
+      with:
+        server_address: smtp.office365.com
+        server_port: 587
+        username: ${{ secrets.EMAIL_USERNAME }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
+        subject: Build and Test Status
+        body: |
+          Did Build Succeed: ${{ needs.build-and-test.result == 'success' }}
+          Did Tests Pass: ${{ needs.build-and-test.result == 'success' }}
+        to: aabraham2@seattleu.edu
+        from: knalla@seattleu.edu # Replace with your email address
+        use_tls: true
+
