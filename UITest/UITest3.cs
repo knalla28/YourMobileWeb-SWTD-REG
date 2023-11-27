@@ -61,14 +61,13 @@ namespace UITest
             TakeScreenshot("HomePageAfterSorting");
 
             // Click "More Info" for iPhone 12
-            IWebElement moreInfoButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("moreInfo_iphone_12")));
+            IWebElement moreInfoButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("moreInfo_iphone_14_pro_max")));
             moreInfoButton.Click();
             Thread.Sleep(3000); // Wait for the modal to open
-            TakeScreenshot("iPhone12MoreInfo");
+            TakeScreenshot("iphone_14_pro_maxMoreInfo");
 
             // Rate the iPhone 12 as 5 stars
-            // The actual implementation might require targeting the specific stars within a container element
-            var ratingStars = _driver.FindElements(By.CssSelector("#productModal .fa-star"));
+            var ratingStars = wait.Until(ExpectedConditions.PresenceOfAllElementsLocatedBy(By.CssSelector("#productModal .fa-star")));
             if (ratingStars.Count >= 5)
             {
                 for (int i = 0; i < 5; i++)
@@ -77,7 +76,7 @@ namespace UITest
                 }
             }
             Thread.Sleep(3000); // Wait for the rating to be processed
-            TakeScreenshot("iPhone12Rated");
+            TakeScreenshot("iPhone14ProMaxRated");
 
             // Add any further steps here as necessary
         }
