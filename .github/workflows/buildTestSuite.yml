@@ -22,17 +22,20 @@ jobs:
       run: dotnet build YourMobileGuide.sln --configuration Release --no-restore
       continue-on-error: true
 
+    - name: Create Test Results Directory
+      run: mkdir -p $GITHUB_WORKSPACE/testresults
+
     - name: Run unit tests
       run: |
-        dotnet test UnitTests/UnitTests.csproj --no-build --results-directory /testresults --logger "trx;LogFileName=unit_test_results.trx"
+        dotnet test UnitTests/UnitTests.csproj --no-build --results-directory $GITHUB_WORKSPACE/testresults --logger "trx;LogFileName=unit_test_results.trx"
       continue-on-error: true
 
-    - name: Upload Test Results
+    - name: Upload Unit Test Results
       uses: actions/upload-artifact@v2
       if: failure()
       with:
         name: unit-test-results
-        path: /testresults
+        path: $GITHUB_WORKSPACE/testresults
 
     - name: Run UI tests
       run: dotnet test UITest/UITest.csproj --no-build --logger "trx;LogFileName=ui_test_results.trx"
