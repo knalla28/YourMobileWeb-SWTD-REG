@@ -64,8 +64,44 @@
     "Title": "Iphone 12",
     "Description": "Iphone 12 cell phone || Factory Unlocked Smartphone || 256GB || 6.1 Inches || iOS 14|| US Version || Price:$650.00.",
     "Ratings": [
-      2
+      2,
+      1,
+      2,
+      2,
+      3,
+      4,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
+    "ProductType": 0,
+    "Quantity": null,
+    "Price": 0,
+    "CommentList": []
+  },
+  {
+    "Id": "update_example_class_demo",
+    "Maker": null,
+    "Image": "https://example.com/example-image.jpg",
+    "Url": "https://example.com/",
+    "Title": "Example phone 1",
+    "Description": "An example description.",
+    "Ratings": null,
+    "ProductType": 0,
+    "Quantity": null,
+    "Price": 0,
+    "CommentList": []
+  },
+  {
+    "Id": "delete_example_class_demo",
+    "Maker": null,
+    "Image": "https://example.com/example-image.jpg",
+    "Url": "https://example.com/",
+    "Title": "Example phone 2",
+    "Description": "An example description.",
+    "Ratings": null,
     "ProductType": 0,
     "Quantity": null,
     "Price": 0,
@@ -88,7 +124,7 @@
     "Price": 0,
     "CommentList": [
       {
-        "Id": "16b9338b-bc8c-4dea-a004-7964147940ea",
+        "Id": "a174207d-4d81-42cc-8966-24637b02dcdb",
         "Comment": "wow!"
       }
     ]
@@ -109,7 +145,7 @@
     "CommentList": []
   },
   {
-    "Id": "322ac7e5-bc04-4fc4-92ce-b238ebfb9e13",
+    "Id": "4a9403e9-d308-42ff-a0d4-972967f4c2b8",
     "Maker": null,
     "Image": "https://example.en.jpg",
     "Url": "https://example.com",
